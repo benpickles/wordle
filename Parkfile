@@ -1,0 +1,10 @@
+require 'parklife'
+require_relative 'app'
+
+Parklife.application.configure do |config|
+  config.app = Sinatra::Application
+end
+
+Parklife.application.routes do
+  root
+end
