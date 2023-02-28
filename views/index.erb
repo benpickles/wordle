@@ -1,0 +1,17 @@
+<div class="results">
+  <% @results.each do |result| %>
+    <article>
+      <div class="info">
+        <h1><%= result.number %></h1>
+        <%= result.score || 'X' %>/6
+      </div>
+      <div class="lines">
+        <% result.lines.each do |line| %>
+          <% line.each_char do |char| %>
+            <span class="<%= class_name(char) %>"><%= char %></span>
+          <% end %>
+        <% end %>
+      </div>
+    </article>
+  <% end %>
+</div>
