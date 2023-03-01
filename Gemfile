@@ -5,5 +5,7 @@ gem 'parklife'
 gem 'sinatra'
 
 group :development do
+  gem 'rb-fsevent'
+  gem 'rerun'
   gem 'webrick'
 end
