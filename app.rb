@@ -2,14 +2,24 @@ require 'sinatra'
 require_relative 'result'
 
 helpers do
-  def class_name(char)
+  def cell(char)
+    name = elem_name(char)
+    %(<#{name}>#{char}</#{name}>)
+  end
+
+  # A short element name for each type of value helps to significantly reduce
+  # the final HTML file size - and is somewhat semantic...
+  def elem_name(char)
     case char
     when '🟩'
-      'c' # correct
+      # "Correct" in Wordle, or "Bring Attention To" in HTML.
+      'b'
     when '🟨'
-      'p' # present
+      # "Present" in Wordle, or "Idiomatic Text" in HTML.
+      'i'
     else
-      'a' # absent
+      # "Absent" in Wordle, or "Unarticulated Annotation" in HTML.
+      'u'
     end
   end
 end

@@ -13,4 +13,10 @@ Result = Data.define(:lines, :number, :score) do
         new(lines:, number:, score:)
       }
   end
+
+  def chars
+    lines.flat_map { |line|
+      line.each_char.to_a
+    }
+  end
 end

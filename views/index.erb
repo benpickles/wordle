@@ -6,11 +6,7 @@
         <%= result.score || 'X' %>/6
       </div>
       <div class="lines">
-        <% result.lines.each do |line| %>
-          <% line.each_char do |char| %>
-            <span class="<%= class_name(char) %>"><%= char %></span>
-          <% end %>
-        <% end %>
+        <%= result.chars.map { |char| cell(char) }.join %>
       </div>
     </article>
   <% end %>
