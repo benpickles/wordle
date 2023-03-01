@@ -30,7 +30,7 @@ h1 {
 }
 .lines > * {
   border-radius: 1px;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, var(--outline-alpha));
   font-style: normal;
   text-indent: -1000rem;
 
@@ -39,12 +39,15 @@ h1 {
   padding-bottom: calc(100%);
 }
 .lines b {
+  --outline-alpha: 0.09;
   background: linear-gradient(#65cf65, #00b100);
 }
 .lines i {
+  --outline-alpha: 0.06;
   background: linear-gradient(#ffe065, #ebb000);
 }
 .lines u {
+  --outline-alpha: 0.02;
   background: linear-gradient(#dedede, #d9d9d9);
 }
 
@@ -55,6 +58,6 @@ h1 {
   }
 
   .lines u {
-    background: linear-gradient(#555, #000);
+    background: linear-gradient(#444, #111);
   }
 }
