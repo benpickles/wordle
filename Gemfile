@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'erubi'
 gem 'parklife'
 gem 'sinatra'
 
