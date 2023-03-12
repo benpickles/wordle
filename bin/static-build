@@ -2,10 +2,10 @@
 
 set -eu
 
-# Build with Parklife.
+# Build with Parklife - and forward arguments sent to this script.
 bundle exec parklife build "$@"
 
-# Copy all public resources to the ./build.
+# Copy all public resources to ./build.
 cp -R public/* build
 
 # List all files in the build (useful for debugging).

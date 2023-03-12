@@ -1,4 +1,3 @@
-require 'parklife'
 require_relative 'app'
 
 Parklife.application.configure do |config|
