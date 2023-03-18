@@ -1,13 +1,15 @@
-<div class="results">
+<h1>My Wordle results</h1>
+
+<main>
   <% @results.each do |result| %>
     <article>
-      <div class="info">
+      <header>
         <h1><%= result.number %></h1>
         <%= result.score || 'X' %>/6
-      </div>
+      </header>
       <div class="lines">
         <%= result.chars.map { |char| cell(char) }.join %>
       </div>
     </article>
   <% end %>
-</div>
+</main>
