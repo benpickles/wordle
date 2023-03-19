@@ -1,3 +1,11 @@
+a {
+  color: #6495ed;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   background: #eee;
   color: #333;
@@ -60,7 +68,19 @@ article .lines u {
   background: linear-gradient(#dedede, #d9d9d9);
 }
 
+footer {
+  padding: 4rem 0 8rem;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
+
 @media (prefers-color-scheme: dark) {
+  a {
+    color: #ed8964;
+  }
+
   body {
     background: #333;
     color: #ddd;
