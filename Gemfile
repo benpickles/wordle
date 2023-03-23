@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'erubi'
 gem 'parklife'
+gem 'phlex'
 gem 'sinatra'
 
 group :development do
