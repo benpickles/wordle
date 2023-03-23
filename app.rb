@@ -53,6 +53,14 @@ class IndexPage < Phlex::HTML
 end
 
 class ResultComponent < Phlex::HTML
+  # A short element name for each type of value helps to significantly reduce
+  # the final HTML file size - and is somewhat semantic...
+  ELEM_NAME = {
+    '🟩' => :b, # "Correct" in Wordle, or "Bring Attention To" in HTML.
+    '🟨' => :i, # "Present" in Wordle, or "Idiomatic Text" in HTML.
+    '⬜' => :u, # "Absent" in Wordle, or "Unarticulated Annotation" in HTML.
+  }
+
   def initialize(result)
     @result = result
   end
@@ -65,30 +73,10 @@ class ResultComponent < Phlex::HTML
       }
       div(class: 'lines') {
         @result.chars.each { |char|
-          cell(char)
+          method(ELEM_NAME.fetch(char)).call { char }
         }
       }
     }
-  end
-
-  def cell(char)
-    method(elem_name(char)).call { char }
-  end
-
-  # A short element name for each type of value helps to significantly reduce
-  # the final HTML file size - and is somewhat semantic...
-  def elem_name(char)
-    case char
-    when '🟩'
-      # "Correct" in Wordle, or "Bring Attention To" in HTML.
-      :b
-    when '🟨'
-      # "Present" in Wordle, or "Idiomatic Text" in HTML.
-      :i
-    else
-      # "Absent" in Wordle, or "Unarticulated Annotation" in HTML.
-      :u
-    end
   end
 end
 
