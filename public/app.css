@@ -39,13 +39,13 @@ article h1 {
   margin: 0;
 }
 
-article .lines {
+article div {
   margin-top: 0.3rem;
   display: grid;
   gap: 1px;
   grid-template-columns: repeat(5, 1fr);
 }
-article .lines > * {
+article div > * {
   border-radius: 1px;
   box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, var(--outline-alpha));
   font-style: normal;
@@ -55,15 +55,15 @@ article .lines > * {
   height: 0;
   padding-bottom: calc(100%);
 }
-article .lines b {
+article div b {
   --outline-alpha: 0.09;
   background: linear-gradient(#65cf65, #00b100);
 }
-article .lines i {
+article div i {
   --outline-alpha: 0.06;
   background: linear-gradient(#ffe065, #ebb000);
 }
-article .lines u {
+article div u {
   --outline-alpha: 0.02;
   background: linear-gradient(#dedede, #d9d9d9);
 }

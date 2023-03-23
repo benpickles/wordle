@@ -71,7 +71,7 @@ class ResultComponent < Phlex::HTML
         h1 { @result.number }
         plain "#{@result.score || 'X'}/6"
       }
-      div(class: 'lines') {
+      div {
         @result.chars.each { |char|
           method(ELEM_NAME.fetch(char)).call { char }
         }
