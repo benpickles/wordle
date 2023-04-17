@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'parklife'
-gem 'phlex'
+gem 'phlex-sinatra'
 gem 'sinatra'
 
 group :development do
