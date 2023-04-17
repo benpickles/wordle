@@ -1,14 +1,6 @@
-require 'phlex'
+require 'phlex-sinatra'
 require 'sinatra'
 require_relative 'result'
-
-module Phlex
-  class HTML
-    def url(...)
-      @_view_context.url(...)
-    end
-  end
-end
 
 class Layout < Phlex::HTML
   def template(&)
@@ -82,5 +74,5 @@ end
 
 get '/' do
   results = Result.parse(File.read('results.txt')).reverse
-  IndexPage.new(results).call(view_context: self)
+  phlex IndexPage.new(results)
 end
