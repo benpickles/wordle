@@ -26,8 +26,8 @@ GEM
     phlex-sinatra (0.2.0)
       phlex
     racc (1.6.2)
-    rack (2.2.6.4)
-    rack-protection (3.0.5)
+    rack (2.2.7)
+    rack-protection (3.0.6)
       rack
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -37,10 +37,10 @@ GEM
     rerun (0.14.0)
       listen (~> 3.0)
     ruby2_keywords (0.0.5)
-    sinatra (3.0.5)
+    sinatra (3.0.6)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
-      rack-protection (= 3.0.5)
+      rack-protection (= 3.0.6)
       tilt (~> 2.0)
     thor (1.2.1)
     tilt (2.1.0)
