@@ -9,3 +9,7 @@ group :development do
   gem 'rerun'
   gem 'webrick'
 end
+
+group :test do
+  gem 'minitest'
+end
