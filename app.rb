@@ -3,7 +3,7 @@ require 'sinatra'
 require_relative 'result'
 
 class Layout < Phlex::HTML
-  def template(&block)
+  def view_template(&block)
     doctype
     html(lang: 'en') {
       head {
@@ -32,7 +32,7 @@ class IndexPage < Phlex::HTML
     @results = results
   end
 
-  def template
+  def view_template
     render Layout.new {
       h1 { "My Wordle results" }
       main {
@@ -57,7 +57,7 @@ class ResultComponent < Phlex::HTML
     @result = result
   end
 
-  def template
+  def view_template
     article {
       header {
         h1 { @result.number }
