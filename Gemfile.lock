@@ -6,12 +6,12 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    mini_portile2 (2.8.8)
     minitest (5.22.3)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.16.0-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.0-x86_64-linux)
+    nokogiri (1.16.0)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parklife (0.6.0)
       nokogiri
@@ -63,4 +63,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.5.4
+   2.6.2
