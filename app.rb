@@ -3,7 +3,7 @@ require 'sinatra'
 require_relative 'result'
 
 class Layout < Phlex::HTML
-  def view_template(&block)
+  def view_template
     doctype
     html(lang: 'en') {
       head {
@@ -13,7 +13,7 @@ class Layout < Phlex::HTML
         link href: url('/app.css', false), rel: 'stylesheet', type: 'text/css'
       }
       body {
-        yield_content(&block)
+        yield
         footer {
           p {
             plain 'A doodah by '
