@@ -7,7 +7,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
-    minitest (5.22.3)
+    minitest (6.0.0)
+      prism (~> 1.5)
     mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.18.2-arm64-darwin)
@@ -25,6 +26,7 @@ GEM
     phlex-sinatra (0.5.0)
       phlex (>= 2)
       sinatra
+    prism (1.7.0)
     racc (1.8.1)
     rack (3.2.4)
     rack-protection (4.2.1)
