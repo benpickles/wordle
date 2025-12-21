@@ -26,4 +26,19 @@ describe Result do
 
     assert_equal 1013, result.number
   end
+
+  it 'works with hard mode results' do
+    results = Result.parse(
+      'Wordle 1,562 5/6*
+
+⬜🟩⬜⬜🟨
+⬜🟩⬜🟩⬜
+⬜🟩⬜🟩⬜
+⬜🟩🟨🟩🟩
+🟩🟩🟩🟩🟩'
+    )
+    result = results.first
+
+    assert_equal 1562, result.number
+  end
 end
