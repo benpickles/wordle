@@ -14,10 +14,13 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.2-x86_64-linux-gnu)
       racc (~> 1.4)
-    parklife (0.7.0)
+    parklife (0.8.1)
       nokogiri
       rack-test
       thor
+    parklife-sinatra (0.3.0)
+      parklife (>= 0.8.1)
+      sinatra
     phlex (2.0.2)
     phlex-sinatra (0.5.0)
       phlex (>= 2)
@@ -58,7 +61,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  parklife
+  parklife-sinatra
   phlex-sinatra
   rackup
   rb-fsevent

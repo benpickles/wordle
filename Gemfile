@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'parklife'
+gem 'parklife-sinatra'
 gem 'phlex-sinatra'
 gem 'sinatra'
 
